@@ -10,7 +10,7 @@ function App() {
 
   // Fetch items from json-server on mount
   useEffect(() => {
-    fetch("http://localhost:3001/items")
+    fetch("https://json-server-2-28ko.onrender.com")
       .then((res) => res.json())
       .then((data) => setItems(data))
       .catch((err) => console.error("Error fetching items:", err));
@@ -23,7 +23,7 @@ function App() {
 
   // Function to delete an item from the server and state
   const deleteItem = (id) => {
-    fetch(`http://localhost:3001/items/${id}`, {
+    fetch(`https://json-server-2-28ko.onrender.com/item/${id}`, {
       method: "DELETE",
     })
       .then(() => {
