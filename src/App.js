@@ -10,7 +10,7 @@ function App() {
 
   // Fetch items from json-server on mount
   useEffect(() => {
-    fetch("https://json-server-2-28ko.onrender.com")
+    fetch("https://json-server-2-28ko.onrender.com/")
       .then((res) => res.json())
       .then((data) => setItems(data))
       .catch((err) => console.error("Error fetching items:", err));
